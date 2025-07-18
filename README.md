@@ -1,9 +1,9 @@
 # Tampilan Utama
 https://github.com/user-attachments/assets/e488279f-8a3f-4be8-86d4-47d4167ab2b3
 # Admin Dashboard
-👉 [Klik di sini untuk menonton demo video](assets/adminVid.mp4)
+https://github.com/user-attachments/assets/490c3159-e914-4277-855a-b67389d383d9
 # Manajer Dashboard
-👉 [Klik di sini untuk menonton demo video](assets/manajerVid.mp4)
+https://github.com/user-attachments/assets/906befb0-d08c-4242-8940-680a3bdcc763
 
 # 🎬 Javara Cinema - Sistem Informasi Pemesanan Tiket Bioskop
 
