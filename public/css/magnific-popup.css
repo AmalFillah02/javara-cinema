@@ -361,7 +361,7 @@ div.small-dialog span.line {
 }
 
 .small-dialog-headline {
-    background: #9352b3;
+    background: #3115a3;
     padding: 20px 30px;
     text-align: center;
     -webkit-border-radius: 5px 5px 0 0;
@@ -399,7 +399,8 @@ div.small-dialog span.line {
     -webkit-border-radius: 0 0 5px 5px;
     -moz-border-radius: 0 0 5px 5px;
     border-radius: 0 0 5px 5px;
-    background: #fff;
+    background: #191919;
+    color: #fff;
     box-shadow: none;
 }
 

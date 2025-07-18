@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\Password;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -56,4 +57,36 @@ class UserController extends Controller
             'reservations' => $user->reservations->where('show.date', '>', Carbon::now()),
         ]);
     }
+
+    public function edit()
+{
+    $user = auth()->user();
+    return view('user.show', compact('user'));
+}
+public function update(Request $request)
+{
+    $user = auth()->user();
+
+    $request->validate([
+        'first_name' => 'required|string|max:255',
+        'last_name' => 'nullable|string|max:255',
+        'email' => [
+            'required', 'email', 'max:255',
+            Rule::unique('users')->ignore($user->id),
+        ],
+        'password' => ['nullable', 'confirmed', Password::min(8)->letters()->numbers()],
+    ]);
+
+    $user->first_name = $request->first_name;
+    $user->last_name  = $request->last_name;
+    $user->email      = $request->email;
+
+    if ($request->filled('password')) {
+        $user->password = bcrypt($request->password);
+    }
+
+    $user->save();
+
+    return redirect()->route('dashboard')->with('success', 'Profil berhasil diupdate.');
+}
 }

@@ -12,7 +12,7 @@
 
             <a class="navbar-brand" href="{{ route('home') }}">
                 <!-- INSERT YOUR LOGO HERE -->
-                <img src="{{ asset('images/branding/logos/logo-bt.png') }}" alt="logo" width="200" class="logo">
+                <img src="{{ asset('images/branding/logos/logo-putih.png') }}" alt="logo" width="200" class="logo">
                 <!-- INSERT YOUR WHITE LOGO HERE -->
                 <img src="{{ asset('images/branding/logos/logo-w.png') }}" alt="white logo" width="200"
                     class="logo-white">
@@ -45,17 +45,12 @@
 
                     <!-- Menu Item -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('movies.index') }}">Movies</a>
+                        <a class="nav-link" href="{{ route('movies.index') }}">Film</a>
                     </li>
 
                     <!-- Menu Item -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('movies.index') }}">What to Watch?</a>
-                    </li>
-
-                    <!-- Menu Item -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact-us') }}">Contact us</a>
+                        <a class="nav-link" href="{{ route('contact-us') }}">Kontak</a>
                     </li>
 
                 </ul>
@@ -80,8 +75,8 @@
                             <a href="{{ route('dashboard') }}" class="btn btn-main btn-effect login-btn">
                                 <i class="icon-user"></i>Hello, {{ auth()->user()->first_name }}</a>
                             <div class="dropdown-content rounded font-weight-normal">
-                                <a href="{{ route('dashboard') }}">My Account</a>
-                                <a href="{{ route('dashboard') }}">My Reservations</a>
+                                <a href="{{ route('dashboard') }}">Profil</a>
+                                <a href="{{ route('dashboard') }}">Pemesanan</a>
                                 @can('admin')
                                     <a href="{{ route('admin.dashboard') }}">Admin Dashboard</a>
                                 @endcan

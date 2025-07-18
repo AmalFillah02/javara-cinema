@@ -14,7 +14,7 @@
     <meta name="author" content="">
 
     <!-- ===== Favicon ===== -->
-    <link rel="shortcut icon" href={{ asset('images/branding/logos/favicon.png') }} type="image/x-icon">
+    <link rel="shortcut icon" href={{ asset('images/branding/logos/logo-letter.png') }} type="image/x-icon">
 
     <title>{{ config('app.name') }} | Admin Panel</title>
 
@@ -39,7 +39,7 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home') }}">
-                <img class="w-100" src="{{ asset('images/branding/logos/logo-w.png') }}" alt="cinemat white logo">
+                <img class="w-100" src="{{ asset('images/branding/logos/logo-putih.png') }}" alt="javara white logo">
             </a>
 
             <!-- Divider -->
@@ -56,18 +56,18 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">Users</div>
+            <div class="sidebar-heading">Pengguna</div>
 
             <li class="nav-item {{ \Request::route()->getName() === 'users.index' ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('users.index') }}">
                     <i class="fas fa-fw fa-users"></i>
-                    <span>View Users</span></a>
+                    <span>Lihat Pengguna</span></a>
             </li>
 
             <li class="nav-item {{ \Request::route()->getName() === 'users.manager-requests' ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('users.manager-requests') }}">
                     <i class="fas fa-fw fa-user-tie"></i>
-                    <span>Manager Requests</span></a>
+                    <span>Permintaan</span></a>
             </li>
 
             <hr class="sidebar-divider d-none d-md-block">
@@ -95,7 +95,7 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form
+                    <!-- <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 small"
@@ -106,7 +106,7 @@
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -147,7 +147,7 @@
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
-                                    Alerts Center
+                                    Notifikasi
                                 </h6>
                                 @foreach ($requests->take(5) as $request)
                                     <a class="dropdown-item d-flex align-items-center"
@@ -160,13 +160,12 @@
                                         <div>
                                             <div class="small text-gray-500">
                                                 {{ $request->created_at->diffForHumans() }}</div>
-                                            <span class="font-weight-bold">{{ $request->username }} has requested to
-                                                become a manager.</span>
+                                            <span class="font-weight-bold">{{ $request->username }} melakukan permintaan menjadi manager.</span>
                                         </div>
                                     </a>
                                 @endforeach
                                 <a class="dropdown-item text-center small text-gray-500"
-                                    href="{{ route('users.manager-requests') }}">Show All Alerts</a>
+                                    href="{{ route('users.manager-requests') }}">Lihat semua permintaan</a>
                             </div>
                         </li>
 
@@ -186,11 +185,11 @@
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="{{ route('users.manager-requests') }}">
                                     <i class="fas fa-user-tie fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Manager Requests
+                                    Permintaan Manager
                                 </a>
                                 <a class="dropdown-item" href="{{ route('users.index') }}">
                                     <i class="fas fa-users fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Users Overview
+                                    Informasi Pengguna
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal"
@@ -221,7 +220,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; {{ config('app.name') }} 2021</span>
+                        <span>Copyright &copy; {{ config('app.name') }} 2025</span>
                     </div>
                 </div>
             </footer>
@@ -244,12 +243,12 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Anda yakin ingin meninggalkan halaman?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Klik "Logout" jika ingin meninggalkan halaman.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <form id="logout_form" method="POST" action="{{ route('logout') }}">

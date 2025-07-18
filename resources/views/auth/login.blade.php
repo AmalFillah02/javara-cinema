@@ -6,7 +6,7 @@
     <!-- =============== START OF WRAPPER =============== -->
     <div class="wrapper">
         <main class="login-register-page"
-            style="background-image: url({{ asset('images/branding/posters/movie-collection.webp') }})">
+            style="background-image: url({{ asset('images/branding/posters/movie-collection.jpg') }})">
             <div class="container">
 
                 <!-- =============== START OF LOGIN & REGISTER POPUP =============== -->
@@ -15,7 +15,7 @@
                     <!-- ===== Start of Signin wrapper ===== -->
                     <div class="signin-wrapper">
                         <div class="small-dialog-headline">
-                            <h4 class="text-center">Sign in</h4>
+                            <h4 class="text-center">Login</h4>
                         </div>
 
 
@@ -28,33 +28,33 @@
                                 <div class="form-group">
                                     <label for="email">Email*</label>
                                     <input type="text" class="form-control" id="email" name="email"
-                                        placeholder="Your Email *" required />
+                                        placeholder="Email *" required />
                                 </div>
 
                                 <div class="form-group">
                                     <label for="password">Password*</label>
                                     <input type="password" class="form-control" id="password" name="password"
-                                        placeholder="Your Password *" required />
+                                        placeholder="Password *" required />
                                 </div>
 
                                 <div class="form-group">
                                     <div class="checkbox pad-bottom-10">
                                         <input id="remember-me" type="checkbox" name="remember-me" value="yes">
-                                        <label for="remember-me">Keep me signed in</label>
+                                        <label for="remember-me">Tetap masuk</label>
                                     </div>
                                 </div>
 
                                 @include('components.error-message', ['field_name' => 'email'])
                                 <div class="form-group">
-                                    <input type="submit" value="Sign in" class="btn btn-main btn-effect nomargin" />
+                                    <input type="submit" value="Login" class="btn btn-main btn-effect nomargin" />
                                 </div>
                             </form>
                             <!-- End of Login form -->
 
                             <div class="bottom-links">
                                 <span>
-                                    Not a member?
-                                    <a href="{{ route('register') }}">Sign up</a>
+                                    Belum punya akun?
+                                    <a href="{{ route('register') }}">Daftar sekarang</a>
                                 </span>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
                 </div>
                 <!-- =============== END OF LOGIN & REGISTER POPUP =============== -->
 
-                <a href={{ route('home') }} class="text-white">Back to Home</a>
+                <a href={{ route('home') }} class="text-white">Kembali ke halaman utama</a>
             </div>
         </main>
     </div>

@@ -27,41 +27,41 @@
 
             <div class="row justify-content-center">
                 <div class="col-md-7 text-center">
-                    <h2 class="title">How it works?</h2>
-                    <h6 class="subtitle">Feeling confused? start here.</h6>
+                    <h2 class="title">Bingung mau pesan tiketnya?</h2>
+                    <h6 class="subtitle">Mari lihat alur dibawah ini</h6>
                 </div>
             </div>
 
             <div class="row">
 
                 <div class="col-md-6 col-sm-12">
+
                     <div class="icon-box2">
-                        <i class="fa fa-film"></i>
-                        <h4 class="title">Pick your movie</h4>
-                        <p>Browse our extensive and exciting collection of movies. Still don't know what to watch? take a
-                            look at our <a href={{ route('movies.index') }} class="text-primary">recommendations.</a></p>
+                        <i class="icon-login"></i>
+                        <h4 class="title">Daftar Akun</h4>
+                        <p>Mendaftar akunmu adalah hal pertama yang harus kamu lakukan.</p>
                     </div>
 
                     <div class="icon-box2">
-                        <i class="fa fa-ticket"></i>
-                        <h4 class="title">Reserve your ticket</h4>
-                        <p>Reserve your ticket to your favourite movie!</p>
+                        <i class="fa fa-film"></i>
+                        <h4 class="title">Pilih Film</h4>
+                        <p>Pilih film yang kamu inginkan dari kumpulan film yang ada di halaman. Bingung pilih film? Lihat  <a href={{ route('movies.index') }} class="text-primary">rekomendari dari kami.</a></p>
                     </div>
+
+                    
                 </div>
 
                 <div class="col-md-6 col-sm-12">
                     <div class="icon-box2">
-                        <i class="icon-login"></i>
-                        <h4 class="title">Register</h4>
-                        <p>Register your account to reserve and pay for tickets. Also to stay up to date with the latest
-                            offers and news.</p>
+                        <i class="fa fa-ticket"></i>
+                        <h4 class="title">Reservasi tiketmu</h4>
+                        <p>Pesan tiketmu untuk film yang telah kamu pilih.</p>
                     </div>
 
                     <div class="icon-box2">
                         <i class="icon-heart"></i>
-                        <h4 class="title">Enjoy!</h4>
-                        <p>Enjoy your movie at one of our cinema rooms, order snacks while you're at it. Your convinence is
-                            our priority.</p>
+                        <h4 class="title">Selamat bersenang-senang 😊</h4>
+                        <p>Selamat bersenang-senang dengan filmmu, jangan lupa untuk pesan snack dan minuman yaaa. Jagalah kebersihan bioskop juga.</p>
                     </div>
                 </div>
 
@@ -77,8 +77,8 @@
             <!-- Start of row -->
             <div class="row justify-content-center">
                 <div class="col-md-7 text-center">
-                    <h2 class="title">Newest Movies</h2>
-                    <h6 class="subtitle">View our latest movies collection.</h6>
+                    <h2 class="title">Film Terbaru</h2>
+                    <h6 class="subtitle">Lihat semua film terbaru dari kami.</h6>
                 </div>
             </div>
             <!-- End of row -->
@@ -92,7 +92,7 @@
         <!-- End of Latest Releases Slider -->
 
         <div class="text-center pt-3">
-            <a class="btn btn-main btn-effect" href="{{ route('movies.index') }}">See All Movies</a>
+            <a class="btn btn-main btn-effect" style="background-color: #191919" href="{{ route('movies.index') }}">Lihat Semua Film</a>
         </div>
     </section>
     <!-- =============== END OF LATEST RELEASES SECTION =============== -->
@@ -106,15 +106,15 @@
 
             <div class="col-md-6 col-sm-12 bg-white">
                 <div class="features-wrapper">
-                    <h3 class="title">Watch all newest Movies once they get released!</h3>
+                    <h3 class="title">Apakah anda ingin menonton film terbaru?</h3>
                     @guest
-                        <p>Sign up or register now to reserve you own tickets. And get notified on new offers and news!</p>
-                        <a class="btn btn-main btn-effect" href="{{ route('register') }}">Register</a>
+                        <p>Daftar akun dan anda akan mendapatkan notifikasi jika ada film terbaru.</p>
+                        <a class="btn btn-main btn-effect" href="{{ route('register') }}">Daftar</a>
                     @endguest
 
                     @auth
-                        <p>Start reserving your tickets to enjoy the latest and greatest movies!</p>
-                        <a class="btn btn-main btn-effect" href="{{ route('movies.index') }}">Shows</a>
+                        <p>Mulai pesan tiketmu dan selamat menonton!</p>
+                        <a class="btn btn-main btn-effect" href="{{ route('movies.index') }}">Lihat Film</a>
                     @endauth
                 </div>
             </div>
@@ -131,13 +131,13 @@
             <div class="row justify-content-center">
                 <div class="col-md-7 text-center">
                     @guest
-                        <h2 class="title">Join Cinemat Now!</h2>
-                        <h6 class="subtitle">Enter your email to be notified about any news and new offers!</h6>
+                        <h2 class="title">Bergabunglah dengan kami!</h2>
+                        <h6 class="subtitle">Masukkan email anda untuk mendapatkan informasi film terbaru dari kami!</h6>
                     @endguest
 
                     @auth
-                        <h2 class="title">Thanks For Using {{ config('app.name') }}!</h2>
-                        <h6 class="subtitle">We hope you enjoy your experience with us!</h6>
+                        <h2 class="title">Terimakasih telah bergbung{{ config('app.name') }}!</h2>
+                        <h6 class="subtitle">Kami berharap anda menikmati film bersama kami!</h6>
                     @endauth
                 </div>
             </div>
@@ -156,9 +156,9 @@
                             <div class="form-group">
                                 <div class="input-group">
                                     <input type="email" name="email" class="form-control" id="email"
-                                        placeholder="Your Email" autocomplete="off">
+                                        placeholder="xxxx@example.com" autocomplete="off">
                                     <label for="email"></label>
-                                    <button type="submit" class="btn btn-main btn-effect">Subscribe</button>
+                                    <button type="submit" class="btn btn-main btn-effect">Bergangung dengan kami</button>
                                 </div>
                             </div>
                         </form>

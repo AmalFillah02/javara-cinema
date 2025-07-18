@@ -101,7 +101,7 @@ function showTab(n) {
     }
     if (n == (x.length - 1)) {
         if (SignedIn)
-            document.getElementById("nextBtn").innerHTML = "Reserve!";
+            document.getElementById("nextBtn").innerHTML = "Pesan!";
         else
             document.getElementById("nextBtn").innerHTML = "Login/Register to reserve";
     } else {
@@ -177,11 +177,11 @@ function validateForm() {
         formData = {};
         $('#reservation-form').serializeArray().map(function (x) { formData[x.name] = x.value; });
         if (formData['card-num'] == "") {
-            $('#card-number-error').text('Card number can\'t be empty');
+            $('#card-number-error').text('Mohon isi nomor kartumu');
             return false;
         } else $('#card-number-error').text('');
         if (formData['name'] == "") {
-            $('#card-name-error').text('Card name can\'t be empty');
+            $('#card-name-error').text('Mohon isi nama kamu');
             return false;
         } else $('#card-name-error').text('');
         if (formData['exp'] == "") {

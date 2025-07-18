@@ -73,6 +73,12 @@ Route::resource('reservations', ReservationController::class)->middleware('auth'
 // Dashboard
 Route::get('/dashboard', [UserController::class, 'dashboard'])->middleware('auth')->name('dashboard');
 
+// Tambahkan route edit & update profile di bawah dashboard
+Route::middleware('auth')->group(function () {
+    Route::get('/profile/edit', [UserController::class, 'edit'])->name('profile.edit');
+    Route::put('/profile/update', [UserController::class, 'update'])->name('profile.update');
+});
+
 // Admin Panel
 Route::group(['prefix' => 'admin', 'middleware' => 'can:admin'], function () {
     Route::resource('users', AdminUserController::class);

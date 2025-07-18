@@ -11,7 +11,7 @@ Author URI: gnodesign.com
 
 
 /* --------------------------------------
-    MAIN COLOR === #9352b3
+    MAIN COLOR === #3115a3
 -------------------------------------- */
 
 
@@ -32,11 +32,11 @@ a:hover,
 .contact-page .details-wrapper ul.contact-details li i,
 .bloglist-post-holder .bloglist-title a:hover,
 .blog-post .post-content a.read-more {
-    color: #9352b3;
+    color: #3115a3;
 }
 
 .main-bg {
-    background: #9352b3;
+    background: #3115a3;
 }
 
 
@@ -52,7 +52,7 @@ a:hover,
 .layout-switcher a:hover,
 .layout-switcher a.active,
 .mm-counter {
-    background: #9352b3;
+    background: #3115a3;
 }
 
 
@@ -82,8 +82,8 @@ ul.blog-posts-widget .blog-content .blog-thumb a:before,
 .bloglist-post-holder .bloglist-thumb-link .bloglist-post-thumbnail:after,
 .movie-box-1 .poster:before,
 .movie-detail-intro2 .movie-poster:before {
-    background: -webkit-gradient(linear, left top, left bottom, from(#a11f3c), to(#9352b3));
-    background: -webkit-linear-gradient(bottom, #9352b3 0%, #a11f3c 100%);
-    background: -o-linear-gradient(bottom, #9352b3 0%, #a11f3c 100%);
-    background: linear-gradient(to bottom, #a11f3c 0%, #9352b3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#3115a3), to(#000000));
+    background: -webkit-linear-gradient(bottom, #000000 0%, #3115a3 100%);
+    background: -o-linear-gradient(bottom, #000000 0%, #3115a3 100%);
+    background: linear-gradient(to bottom, #3115a3 0%, #000000 100%);
 }

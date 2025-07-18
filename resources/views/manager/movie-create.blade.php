@@ -1,22 +1,22 @@
 @extends('manager.layout')
 
 @section('content')
-<h1 class="h3 mb-4 text-gray-800">Add Movie</h1>
+<h1 class="h3 mb-4 text-gray-800">Tambah Film</h1>
 <form action="{{ route('manager.movies.store') }}"
-      method="POST" enctype="multipart/form-data">
+    method="POST" enctype="multipart/form-data">
     @csrf
     <div class="row">
         @include('components.form-input',[
         'name'=>'image',
         'classes'=>'col-6',
-        'label'=>'Poster Image',
+        'label'=>'Poster Film*',
         'required'=>'required',
         'type'=>'file',
         ])
         @include('components.form-input',[
         'name'=>'title',
         'classes'=>'col-6',
-        'label'=>'Image Title*',
+        'label'=>'Judul*',
         'required'=>'required',
         'type'=>'text',
         'value'=>old('title'),
@@ -25,7 +25,7 @@
     <div class="row">
         @include('components.form-select',[
         'name'=>'category_id',
-        'label'=>'Category*',
+        'label'=>'Kategori*',
         'classes'=>'col-6',
         'options'=>$categories,
         'required'=>'required',
@@ -34,7 +34,7 @@
         @include('components.form-input',[
         'name'=>'language',
         'classes'=>'col-6',
-        'label'=>'Movie Language*',
+        'label'=>'Bahasa*',
         'required'=>'required',
         'type'=>'text',
         'value'=>old('language'),
@@ -45,7 +45,7 @@
         @include('components.form-input',[
         'name'=>'rating',
         'classes'=>'col-6',
-        'label'=>'Movie Rating*',
+        'label'=>'Rating Film*',
         'required'=>'required',
         'type'=>'number',
         'value'=>old('rating'),
@@ -53,7 +53,7 @@
         ])
         @include('components.form-date',[
         'name'=>'release_date',
-        'label'=>'Movie Release Date*',
+        'label'=>'Tanggal Rilis*',
         'classes'=>'col-6',
         'value'=>old('release_date'),
         'required'=>'required',
@@ -64,32 +64,39 @@
         @include('components.form-input',[
         'name'=>'director',
         'classes'=>'col-6',
-        'label'=>'Director*',
+        'label'=>'Sutradara*',
         'required'=>'required',
         'type'=>'text',
         'value'=>old('director'),
         ])
-        @include('components.form-input',[
-        'name'=>'maturity_rating',
-        'classes'=>'col-6',
-        'label'=>'Maturity Rating*',
-        'required'=>'required',
-        'type'=>'text',
-        'value'=>old('maturity_rating'),
+        @include('components.form-select', [
+        'name' => 'maturity_rating',
+        'classes' => 'col-6',
+        'label' => 'Maturity Rating*',
+        'required' => 'required',
+        'options' => [
+        'SU' => 'Semua Umur (SU)',
+        '13+' => '13 Tahun Ke Atas',
+        '17+' => '17 Tahun Ke Atas',
+        '21+' => '21 Tahun Ke Atas',
+        ],
+        'selected' => old('maturity_rating'),
         ])
     </div>
     <div class="row">
-        @include('components.form-time',[
-        'name'=>'running_time',
-        'label'=>'Running Time*',
-        'classes'=>'col-6',
-        'value'=>old('running_time'),
-        'required'=>'required',
+        @include('components.form-input', [
+        'name' => 'running_time',
+        'label' => 'Durasi Film (HH:MM:SS)*',
+        'classes' => 'col-6',
+        'value' => old('running_time'),
+        'required' => 'required',
+        'type' => 'text',
+        'placeholder' => '02:50:23',
         ])
         @include('components.form-textarea',[
         'name'=>'storyline',
         'classes'=>'col-6',
-        'label'=>'Movie Storyline*',
+        'label'=>'Sinopsis*',
         'required'=>'required',
         'value'=>old('storyline'),
         ])
@@ -97,8 +104,8 @@
 
     <div class="row justify-content-end">
         <input class="btn btn-success m-2"
-               type="submit"
-               value="Save">
+            type="submit"
+            value="Tambahkan">
     </div>
 </form>
 @include('components.flash-message')

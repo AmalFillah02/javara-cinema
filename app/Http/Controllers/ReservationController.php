@@ -110,7 +110,7 @@ class ReservationController extends Controller
 
         return redirect('dashboard')->with([
             'flash' => 'success',
-            'message' => 'Successfully canceled your reservation. You will be refunded the ticket\'s amount.',
+            'message' => 'Berhasil membatalkan pemesanan tiket, pembayarnmu akan dikembalikan.',
         ]);
     }
 }

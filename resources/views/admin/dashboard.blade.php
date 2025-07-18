@@ -9,7 +9,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Movies</div>
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Film</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $numOfMovies }}</div>
                         </div>
                         <div class="col-auto">
@@ -25,7 +25,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Shows</div>
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Dilihat</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $numOfShows }}</div>
                         </div>
                         <div class="col-auto">
@@ -41,7 +41,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Customers</div>
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Pelanggan</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $numOfCustomers }}</div>
                         </div>
                         <div class="col-auto">
@@ -58,7 +58,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Manager Requests</div>
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Butuh perijinan</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $managerRequestsCount }}</div>
                         </div>
                         <div class="col-auto">
@@ -103,10 +103,10 @@
                             <i class="fas fa-circle text-primary"></i> Admin
                         </span>
                         <span class="mr-2">
-                            <i class="fas fa-circle text-success"></i> Manger
+                            <i class="fas fa-circle text-success"></i> Manajer
                         </span>
                         <span class="mr-2">
-                            <i class="fas fa-circle text-info"></i> Customers
+                            <i class="fas fa-circle text-info"></i> Pelanggan
                         </span>
                     </div>
                 </div>
@@ -142,8 +142,8 @@
                     data: [@json($adminUsers), @json($managerUsers),
                         @json($customerUsers)
                     ],
-                    backgroundColor: ['#9352b3', '#1cc88a', '#36b9cc'],
-                    hoverBackgroundColor: ['#703e88', '#17a673', '#2c9faf'],
+                    backgroundColor: ['#3115a3', '#1cc88a', '#36b9cc'],
+                    hoverBackgroundColor: ['#3115a3', '#17a673', '#2c9faf'],
                     hoverBorderColor: "rgba(234, 236, 244, 1)",
                 }],
             },

@@ -6,13 +6,13 @@
 
 @section('content')
     <section class="page-header overlay-gradient"
-        style="background: url({{ asset('images/branding/posters/movie-collection.webp') }});">
+        style="background: url({{ asset('images/branding/posters/movie-collection.jpg') }});">
         <div class="container">
             <div class="inner">
                 <h2 class="title">Movies</h2>
                 <ol class="breadcrumb">
                     <li><a href="{{ route('home') }}">Home</a></li>
-                    <li>Movies</li>
+                    <li>Film</li>
                 </ol>
             </div>
         </div>
@@ -42,16 +42,17 @@
 
 
                 <form method="GET" action="{{ route('movies.index') }}" class="d-flex">
-
-                    <input type="search" name="search" id="search" class="py-1 form-control" placeholder="search"
+                    
+                    <label for="category" class="pr-1 text-nowrap" style="color: #ffffff;">Nama Film:</label>
+                    <input style="background-color: #383737ff; color: #ffffff; width: 100px;" type="search" name="search" id="search" class="py-1 form-control" placeholder="Cari"
                         style="flex-basis: fit-content" value="{{ request('search') }}">
 
                     <div class="px-3 py-3 py-xl-0"></div>
 
                     <div class="d-flex align-items-center">
-                        <label for="category" class="pr-1 text-nowrap">Category:</label>
-                        <select name="category" id="category" class="py-1">
-                            <option value="" default>All Categories</option>
+                        <label for="category" style="color: #ffffff;" class="pr-1 text-nowrap">Kategori:</label>
+                        <select style="background-color: #383737ff; color: #ffffff;" name="category" id="category" class="py-1">
+                            <option value="" default>Kategori</option>
                             @foreach (\App\Models\Category::CATEGORIES as $category)
                                 <option value="{{ $category }}"
                                     {{ request('category') == $category ? 'selected' : '' }}>
@@ -64,16 +65,16 @@
                     <div class="px-3 py-3 py-xl-0"></div>
 
                     <div class="d-flex align-items-center">
-                        <label for="sort" class="pr-1 text-nowrap">Sort by: </label>
+                        <label for="sort" class="pr-1 text-nowrap" style="color: #ffffff;">Berdasarkan: </label>
                         @php
                             $sortings = [
-                                'default' => 'Default Order',
-                                'top-rated' => 'Top Rated',
-                                'newest' => 'Newest',
-                                'oldest' => 'Oldest',
+                                'default' => 'Default',
+                                'top-rated' => 'Paling Laris',
+                                'newest' => 'Terbaru',
+                                'oldest' => 'Terlama',
                             ];
                         @endphp
-                        <select name="sort" id="sort" class="py-1">
+                        <select style="background-color: #383737ff; color: #ffffff;" name="sort" id="sort" class="py-1">
                             @foreach ($sortings as $value => $sorting)
                                 <option value="{{ $value }}" {{ request('sort') == $value ? 'selected' : '' }}>
                                     {{ $sorting }}
@@ -128,7 +129,7 @@
 
             <!-- Start of Pagination -->
             <div class="row">
-                <div class="col-md-12 col-sm-12">
+                <div class="col-md-12 col-sm-12" style="color: #ffffff;">
                     {!! $movies->links('pagination::bootstrap-4') !!}
                 </div>
             </div>

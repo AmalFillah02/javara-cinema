@@ -8,7 +8,7 @@
         <tr>
             <th scope="col">Username</th>
             <th scope="col">Email</th>
-            <th scope="col">Created at</th>
+            <th scope="col">Tanggal Daftar</th>
             <th scope="col"></th>
             <th scope="col"></th>
         </tr>
@@ -23,7 +23,7 @@
                 @csrf
                 @method('PUT')
                 <input type="hidden" name="accepted" value=1>
-                <input class="btn btn-info text-white" type="submit" value="Accept">
+                <input class="btn btn-info text-white" type="submit" value="Setujui">
             </form>
         </td>
         <td class="">
@@ -31,7 +31,7 @@
                 @csrf
                 @method('PUT')
                 <input type="hidden" name="accepted" value=0>
-                <input class="btn btn-danger text-white" type="submit" value="Reject">
+                <input class="btn btn-danger text-white" type="submit" value="Tolak">
             </form>
         </td>
     </tr>
@@ -39,7 +39,7 @@
 </table>
 @else
 <div class="bg-light p-3 font-weight-bold rounded text-center">
-    There are currently no manager requests.
+    Saat ini tidak ada permintaan dari manajer.
 </div>
 @endif
 @include('components.flash-message')

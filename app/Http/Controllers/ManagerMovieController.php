@@ -69,8 +69,8 @@ class ManagerMovieController extends Controller
             'rating' => ['required', 'numeric', 'lte:5', 'gte:0'],
             'release_date' => ['required', 'date'],
             'director' => ['required', 'min:1', 'max:255'],
-            'maturity_rating' => ['required', 'min:1', 'max:255', 'alpha_dash'],
-            'running_time' => ['required', 'date_format:H:i'],
+            'maturity_rating' => ['required', Rule::in(['SU', '13+', '17+', '21+'])],
+            'running_time' => ['required', 'date_format:H:i:s'],
             'storyline' => ['required', 'min:1', 'string'],
             'image' => ['required', 'image'],
         ]);
@@ -83,7 +83,7 @@ class ManagerMovieController extends Controller
         // redirect with success
         return redirect()->route('manager.movies.edit', $movie)->with([
             'flash' => 'success',
-            'message' => 'Added movie successfully',
+            'message' => 'Film Berhasil Ditambahkan',
         ]);
     }
 
@@ -129,7 +129,7 @@ class ManagerMovieController extends Controller
             'release_date' => ['required', 'date'],
             'director' => ['required', 'min:1', 'max:255'],
             'maturity_rating' => ['required', 'min:1', 'max:255', 'alpha_dash'],
-            'running_time' => ['required', 'date_format:H:i'],
+            'running_time' => ['required', 'date_format:H:i:s'],
             'storyline' => ['required', 'min:1', 'string'],
             'image' => ['image'],
         ]);
@@ -143,7 +143,7 @@ class ManagerMovieController extends Controller
         // redirect to edit page with message
         return redirect()->route('manager.movies.edit', $movie)->with([
             'flash' => 'success',
-            'message' => 'Updated Movie Successfully',
+            'message' => 'Update film berhasil.',
         ]);
     }
 
@@ -159,7 +159,7 @@ class ManagerMovieController extends Controller
 
         return redirect()->route('manager.movies.index')->with([
             'flash' => 'success',
-            'message' => 'Successfully deleted movie.',
+            'message' => 'Berhasil menghapus film.',
         ]);
     }
 }

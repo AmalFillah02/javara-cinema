@@ -22,12 +22,12 @@
             <form action="{{ route('users.destroy',$user->id) }}" method="POST">
                 @csrf
                 @method('delete')
-                <input class="btn btn-danger text-white" type="submit" value="Delete User">
+                <input class="btn btn-danger text-white" type="submit" value="Hapus Pengguna">
             </form>
         </td>
         @else
         <td class="">
-            <button class="btn btn-danger text-white disabled" type="button">Delete User</button>
+            <button class="btn btn-danger text-white disabled" type="button">Hapus Pengguna</button>
         </td>
         @endif
     </tr>

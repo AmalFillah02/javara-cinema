@@ -14,7 +14,7 @@
     <title>{{ config('app.name') }}</title>
 
     <!-- ===== Favicon ===== -->
-    <link rel="shortcut icon" href={{ asset('images/branding/logos/favicon.png') }} type="image/x-icon">
+    <link rel="shortcut icon" href={{ asset('images/branding/logos/logo-letter.png') }} type="image/x-icon">
 
     <!-- ===== Google Fonts ===== -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href={{ asset('revolution/css/layers.css') }}>
     <link rel="stylesheet" type="text/css" href={{ asset('revolution/css/navigation.css') }}>
     <link rel="stylesheet" type="text/css" href={{ asset('css/magnific-popup.css') }}>
-    <link rel="stylesheet" type="text/css" href={{ asset('css/jquery.mmenu.css') }}>
+    <link rel="stylesheet" type="text/css" href={{ asset('css/jquery.menu.css') }}>
     <link rel="stylesheet" type="text/css" href={{ asset('css/owl.carousel.min.css') }}>
 
     <link rel="stylesheet" type="text/css" href={{ asset('css/style.css') }}>

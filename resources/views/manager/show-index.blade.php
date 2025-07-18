@@ -1,17 +1,17 @@
 @extends('manager.layout')
 
 @section('content')
-<h1 class="h3 mb-4 text-gray-800">Movie Shows</h1>
+<h1 class="h3 mb-4 text-gray-800">Jadwal Film</h1>
 
 @if ($shows->isNotEmpty())
 <table class="showtime-table table table-striped table-hover rounded">
     <thead class="thead-dark">
         <tr>
-            <th scope="col">Show ID</th>
-            <th scope="col">Movie Title</th>
-            <th scope="col">Date</th>
-            <th scope="col">Start Time</th>
-            <th scope="col">End Time</th>
+            <th scope="col">Jadwal ID</th>
+            <th scope="col">Judul Film</th>
+            <th scope="col">Tanggal</th>
+            <th scope="col">Mulai</th>
+            <th scope="col">Berakhir</th>
             <th scope="col"></th>
             <th scope="col"></th>
         </tr>
@@ -35,7 +35,7 @@
                 @method('DELETE')
                 <input class="btn btn-danger text-white"
                        type="submit"
-                       value="Delete">
+                       value="Hapus">
             </form>
         </td>
     </tr>
@@ -43,7 +43,7 @@
 </table>
 @else
 <div class="bg-light p-3 font-weight-bold rounded text-center">
-    There are currently no shows.
+    Belum ada film yang dijadwalkan.
 </div>
 @endif
 @include('components.flash-message')

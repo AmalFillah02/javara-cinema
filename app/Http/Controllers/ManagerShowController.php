@@ -62,7 +62,7 @@ class ManagerShowController extends Controller
         // redirect with success
         return redirect()->route('manager.shows.edit', $show)->with([
             'flash' => 'success',
-            'message' => 'Added show successfully',
+            'message' => 'Berhasil menambahkan jadwal',
         ]);
     }
 
@@ -121,7 +121,7 @@ class ManagerShowController extends Controller
         // redirect to edit page with message
         return redirect()->route('manager.shows.edit', $show)->with([
             'flash' => 'success',
-            'message' => 'Updated Show Successfully',
+            'message' => 'Update berhasil.',
         ]);
     }
 
@@ -137,7 +137,7 @@ class ManagerShowController extends Controller
 
         return redirect()->route('manager.shows.index')->with([
             'flash' => 'success',
-            'message' => 'Successfully deleted show.',
+            'message' => 'Berhasil menghapus jadwal.',
         ]);
     }
 }
