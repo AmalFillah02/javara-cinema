@@ -1,5 +1,5 @@
 # Tampilan Utama
-👉 [Klik di sini untuk menonton demo video](assets/menu.mp4)
+https://github.com/user-attachments/assets/e488279f-8a3f-4be8-86d4-47d4167ab2b3
 # Admin Dashboard
 👉 [Klik di sini untuk menonton demo video](assets/adminVid.mp4)
 # Manajer Dashboard
