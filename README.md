@@ -1,9 +1,9 @@
 # Tampilan Utama
-https://github.com/user-attachments/assets/e488279f-8a3f-4be8-86d4-47d4167ab2b3
+https://github.com/user-attachments/assets/f89eee6c-c6c8-4440-9fde-54ecac820973
 # Admin Dashboard
-https://github.com/user-attachments/assets/490c3159-e914-4277-855a-b67389d383d9
+https://github.com/user-attachments/assets/a2e23940-0bfa-461a-a255-ae7f6e1ffdfd
 # Manajer Dashboard
-https://github.com/user-attachments/assets/906befb0-d08c-4242-8940-680a3bdcc763
+https://github.com/user-attachments/assets/aa5c8ab4-0aca-43b2-9028-2069794c1c28
 
 # 🎬 Javara Cinema - Sistem Informasi Pemesanan Tiket Bioskop
 
@@ -12,7 +12,7 @@ Javara Cinema adalah sistem informasi berbasis web untuk pengelolaan pemesanan t
 ## 🔧 Fitur Utama
 🎥 Manajemen film dan kategori
 
-🕒 Penjadwalan tayang (shows)
+🕒 Penjadwalan tayang
 
 🪑 Pemesanan kursi secara dinamis
 
